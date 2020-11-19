@@ -1,0 +1,28 @@
+Options +FollowSymlinks
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^/]+)/$ $1.html
+RewriteRule ^([^/]+)/([^/]+)/$ /$1/$2.html
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !(.[a-zA-Z0-9]{1,5}|/)$
+RewriteRule (.*)$ /$1/ [R=301,L]
+RewriteRule ^index.*$ index.html [NC]
+RewriteRule ^anasayfa.*$ index.html [NC]
+RewriteRule ^iletisim.*$ iletisim.html [NC]
+RewriteRule ^hakkimizda.*$ hakkimizda.html [NC]
+RewriteRule ^prensipler.*$ prensipler.html [NC]
+RewriteRule ^rehber.*$ rehber.html [NC]
+RewriteRule ^sertifikalar.*$ sertifikalar.html [NC]
+RewriteRule ^teknoloji-ve-celik-yelekler.*$ teknoloji-ve-celik-yelekler.html [NC]
+RewriteRule ^referanslar.*$ referanslar.html [NC]
+RewriteRule ^vizyon.*$ vizyon.html [NC]
+RewriteRule ^misyon.*$ misyon.html [NC]
+RewriteRule ^neden-swat-guvenlik.*$ neden-swat-guvenlik.html [NC]
+RewriteRule ^resimlerimiz.*$ resimlerimiz.html [NC]
+RewriteRule ^videolarimiz.*$ videolarimiz.html [NC]
+RewriteRule ^vip-koruma-hizmeti.*$ vip-koruma-hizmeti.html [NC]
+RewriteRule ^meslek-ici-egitim.*$ meslek-ici-egitim.html [NC]
+RewriteRule ^sahsi-egitim.*$ sahsi-egitim.html [NC]
+RewriteRule ^ozel-guvenlik-hukuku.*$ ozel-guvenlik-hukuku.html [NC]
+RewriteRule ^muracat-formu.*$ muracat-formu.html [NC]
